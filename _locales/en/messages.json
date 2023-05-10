@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "name"
+  },
+  "extensionDescription": {
+    "message": "description"
+  },
+  "extensionActionTitle": {
+    "message": "Tools"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "minify": true,
+  "jsc": {
+    "target": "esnext",
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true
+    },
+    "experimental": {
+      "plugins": [
+        [
+          "@swc/plugin-transform-imports",
+          {
+            "@mui/material/?(((\\\\w*)?/?)*)": {
+              "transform": "@mui/material/{{ matches.[1] }}/{{member}}"
+            },
+            "@mui/icons-material/?(((\\\\w*)?/?)*)": {
+              "transform": "@mui/icons-material/{{ matches.[1] }}/{{member}}"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

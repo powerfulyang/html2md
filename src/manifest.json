@@ -1,0 +1,51 @@
+{
+  "name": "__MSG_extensionName__",
+  "author": "powerfulyang",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "minimum_chrome_version": "110",
+  "default_locale": "en",
+  "description": "__MSG_extensionDescription__",
+  "icons": {
+    "128": "assets/images/icon-128.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+T"
+      }
+    }
+  },
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "match_about_blank": true,
+      "all_frames": true,
+      "js": [
+        "js/content_script.js",
+        "js/vendors.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "__MSG_extensionActionTitle__",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "assets/images/icon-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

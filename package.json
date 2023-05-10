@@ -1,0 +1,44 @@
+{
+  "name": "chrome-extensions",
+  "version": "1.0.0",
+  "description": "chrome-extensions template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack watch --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.prod.js",
+    "zip": "pnpm run build && node ./dev/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "devDependencies": {
+    "@powerfulyang/lint": "3.2.1",
+    "@swc/plugin-transform-imports": "1.5.61",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "@types/webextension-polyfill": "0.10.0",
+    "archiver": "5.3.1",
+    "copy-webpack-plugin": "11.0.0",
+    "dotenv": "16.0.3",
+    "html-loader": "4.2.0",
+    "swc-loader": "0.2.3",
+    "typescript": "5.0.4",
+    "webpack": "5.82.0",
+    "webpack-cli": "5.1.0",
+    "webpack-dev-server": "4.15.0",
+    "webpack-merge": "5.8.0"
+  },
+  "dependencies": {
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@mui/material": "5.12.3",
+    "@powerfulyang/utils": "1.10.2",
+    "@tanstack/react-query": "4.29.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "webextension-polyfill": "0.10.0"
+  }
+}
