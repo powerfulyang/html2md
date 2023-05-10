@@ -1,15 +1,17 @@
 {
-  "name": "chrome-extensions",
+  "name": "html2md",
   "version": "1.0.0",
-  "description": "chrome-extensions template",
+  "description": "a chrome extension to convert html to markdown",
   "main": "index.js",
   "scripts": {
     "dev": "webpack watch --config ./config/webpack.dev.js",
     "build": "webpack --config ./config/webpack.prod.js",
     "zip": "pnpm run build && node ./dev/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "html2md"
+  ],
+  "author": "powerfulyang",
   "license": "ISC",
   "browserslist": [
     "last 1 Chrome versions"
@@ -27,7 +29,7 @@
     "swc-loader": "0.2.3",
     "typescript": "5.0.4",
     "webpack": "5.82.0",
-    "webpack-cli": "5.1.0",
+    "webpack-cli": "5.1.1",
     "webpack-dev-server": "4.15.0",
     "webpack-merge": "5.8.0"
   },

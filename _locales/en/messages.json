@@ -1,9 +1,9 @@
 {
   "extensionName": {
-    "message": "name"
+    "message": "html2md"
   },
   "extensionDescription": {
-    "message": "description"
+    "message": "Convert Selected HTML to Markdown"
   },
   "extensionActionTitle": {
     "message": "Tools"
