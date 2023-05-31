@@ -7,6 +7,20 @@ window.addEventListener('keydown', async (ev) => {
     if (userSelection) {
       const range = userSelection?.getRangeAt(0);
       const clonedSelection = range.cloneContents();
+      // =================
+      // cloneContents will not clone the .katex-mathml element
+      if (clonedSelection.querySelector('.katex')) {
+        const elements = clonedSelection.querySelectorAll('.katex');
+        elements.forEach((element) => {
+          document.querySelectorAll('.katex-html').forEach((el) => {
+            if (el.textContent === element.querySelector('.katex-html')?.textContent) {
+              // eslint-disable-next-line no-param-reassign
+              element.innerHTML = el.parentElement?.innerHTML || '';
+            }
+          });
+        });
+      }
+      // =================
       const div = document.createElement('div');
       div.appendChild(clonedSelection);
       const html = div.innerHTML;
