@@ -6,6 +6,6 @@
     "message": "Convert Selected HTML to Markdown"
   },
   "extensionActionTitle": {
-    "message": "Tools"
+    "message": "html2md"
   }
 }
