@@ -10,7 +10,13 @@ browser.tabs.query({ active: true, currentWindow: true }).then(() => {
     createRoot(root).render(
       <React.StrictMode>
         <QueryClientProvider client={queryClient}>
-          <div>Options</div>
+          <div
+            style={{
+              padding: 10,
+            }}
+          >
+            Shortcut：`Command + Option` or `Ctrl + Alt`
+          </div>
         </QueryClientProvider>
       </React.StrictMode>,
     );
